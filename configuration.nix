@@ -5,6 +5,10 @@
 { config, pkgs, ... }:
 
 let
+  # Adds nixos-unstable packages
+  # Make sure to add the unstable repo first
+  pkgsUnstable = import <unstable> { config.allowUnfree = true; }; 
+
   change-mac = pkgs.writeShellScript "change-mac" ''
     for card in "$@"; do
       tmp=$(mktemp)
@@ -22,10 +26,6 @@ let
       fi
     done
   '';
-
-  # Adds nixos-unstable packages
-  # Make sure to add the unstable repo first
-  pkgsUnstable = import <unstable> { config.allowUnfree = true; };
 
 in {
   imports =
@@ -128,42 +128,42 @@ in {
     description = "Volk";
     extraGroups = [ "networkmanager" "wheel" "volk" ];
     packages = with pkgs; [
-      gcc
-      go
+	gcc
+	go
 	
-      #python3
-      (python3.withPackages(ps: with ps; [
-        requests
-      ]))
+	#python3
+	(python3.withPackages(ps: with ps; [
+		requests
+	]))
 
-      git
-      gnupg
-      gpg-tui
-      neofetch
-      firefox
-      btop
-      brave
-      flameshot
-      vscode
-      thunderbird
-      leafpad
-      gimp
-      tilix
-      pkgsUnstable.libvibrant
-      
-      # Addons
-      cmatrix
-      pkgsUnstable.mullvad-vpn
-      #pkgsUnstable.discord
-      #(pkgsUnstable.discord.override {
-        #   withVencord = true;
-      #})
-      pkgsUnstable.vesktop
-      element-desktop
-      pkgsUnstable.planify
-      ledger-live-desktop
-      spotify
-      steam
+	git
+	gnupg
+	gpg-tui
+	neofetch
+	firefox
+	btop
+	brave
+	flameshot
+	vscode
+	thunderbird
+	leafpad
+	gimp
+	tilix
+	pkgsUnstable.libvibrant
+	
+	# Addons
+	cmatrix
+	pkgsUnstable.mullvad-vpn
+	#pkgsUnstable.discord
+	#(pkgsUnstable.discord.override {
+  	#   withVencord = true;
+	#})
+	pkgsUnstable.vesktop
+	element-desktop
+	pkgsUnstable.planify
+	ledger-live-desktop
+	spotify
+	steam
     ];
   };
 
