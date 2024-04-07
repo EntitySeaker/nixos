@@ -1,5 +1,5 @@
 # System configuration
-`#` = run as root
+`#` = run as root<br>
 `$` = run as user
 
 ## Update the nixos system
@@ -23,8 +23,8 @@
 - `$ dconf load /com/gexperts/Tilix/ < tilix-backup` #Loads tilix dconf config from a file
 
 ## Customization
-In order to add new cursors for a user extract the cursor zip package inside `~/.config`
-Then restart the themes application and choose the custom cursor
+In order to add new cursors for a user extract the cursor zip package inside `~/.config`<br>
+Then restart the themes application and choose the custom cursor<br>
 The filemanager takes pictures, videos, documents etc from: `~/.config/user-dirs.dirs`
 
 ## Delete old generations
