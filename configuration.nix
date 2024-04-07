@@ -128,42 +128,42 @@ in {
     description = "Volk";
     extraGroups = [ "networkmanager" "wheel" "volk" ];
     packages = with pkgs; [
-	gcc
-	go
-	
-	#python3
-	(python3.withPackages(ps: with ps; [
-		requests
-	]))
+      gcc
+      go
+      
+      #python3
+      (python3.withPackages(ps: with ps; [
+        requests
+      ]))
 
-	git
-	gnupg
-	gpg-tui
-	neofetch
-	firefox
-	btop
-	brave
-	flameshot
-	vscode
-	thunderbird
-	leafpad
-	gimp
-	tilix
-	pkgsUnstable.libvibrant
-	
-	# Addons
-	cmatrix
-	pkgsUnstable.mullvad-vpn
-	#pkgsUnstable.discord
-	#(pkgsUnstable.discord.override {
-  	#   withVencord = true;
-	#})
-	pkgsUnstable.vesktop
-	element-desktop
-	pkgsUnstable.planify
-	ledger-live-desktop
-	spotify
-	steam
+      git
+      gnupg
+      gpg-tui
+      neofetch
+      firefox
+      btop
+      brave
+      flameshot
+      vscode
+      thunderbird
+      leafpad
+      gimp
+      tilix
+      pkgsUnstable.libvibrant
+      
+      # Addons
+      cmatrix
+      pkgsUnstable.mullvad-vpn
+      #pkgsUnstable.discord
+      #(pkgsUnstable.discord.override {
+        #   withVencord = true;
+      #})
+      pkgsUnstable.vesktop
+      element-desktop
+      pkgsUnstable.planify
+      ledger-live-desktop
+      spotify
+      steam
     ];
   };
 
