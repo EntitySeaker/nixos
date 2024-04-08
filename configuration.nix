@@ -167,8 +167,9 @@ in {
       
       # Addons
       cmatrix
-      mullvad-vpn
       pkgsUnstable.keepassxc
+      mullvad-vpn
+      veracrypt
       #pkgsUnstable.discord
       #(pkgsUnstable.discord.override {
         #   withVencord = true;
@@ -179,6 +180,7 @@ in {
       ledger-live-desktop
       spotify
       steam
+      prismlauncher
     ];
   };
 

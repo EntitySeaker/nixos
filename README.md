@@ -9,7 +9,7 @@
 - `# nixos-rebuild switch --upgrade` #Rebuilds and updates the system
 - `# nix-channel --rollback` #Rolls back to the previous version incase the update broke things
 
-## Audo update the nixos system
+## Auto update the nixos system
 - `system.autoUpgrade.channel = https://nixos.org/channels/nixos-19.09;` #Specify the channel (optional)
 - `system.autoUpgrade.enable = true;` #Enables automatic updates
 - `system.autoUpgrade.allowReboot = true;` #Enables automatic reboots after kernel updates (optional)
